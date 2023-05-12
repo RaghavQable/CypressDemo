@@ -8,9 +8,13 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 
+import data from "../fixtures/demoData.json"
 
 // -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
+Cypress.Commands.add('login', (emailLocator, passwordLocator) => {
+    cy.get(emailLocator).type(data.email,{ log: false })
+    cy.get(passwordLocator).type(data.password,{ log: false })
+  })
 
 
 // -- This is a child command --

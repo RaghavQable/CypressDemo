@@ -21,7 +21,7 @@
      ```
    4. To open the Cypress Test Runner and run the tests: execute this command ``npx cypress open``
    5. To run tests in headless using CLI execute this command ``npx cypress run``
-   6. To run specific spec file in headless use thiFolder Structures command for eg. ``npx cypress run --spec "path/to/spec-file.spec.js"``
+   6. To run specific spec file in headless use this command for eg. ``npx cypress run --spec "path/to/spec-file.spec.js"``
 
 **Folder Structure**
 ```

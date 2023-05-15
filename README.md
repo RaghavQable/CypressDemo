@@ -1,4 +1,4 @@
-# Cypress-core
+# Cypress-Core
 
 **Cypress-Core Framework**
 
@@ -25,8 +25,9 @@
 
 **Folder Structure**
 ```
---e2e(main)___Test__
-	            |__spec.cy.js
+--e2e(main)___
+              |__Test__
+	               |__spec.cy.js
 
 --fixture__
            |__demo_data.json
@@ -44,11 +45,14 @@
                       |          |__demo_locator.js
                       |
                       |__moduleFunctions__
-                                          |__demo_module.js
+                      |                   |__demo_module.js
+                      |
+                      |__utils.js
      
 --report
---screenshots__demo_spec.png
---test-results
+--screenshots
+             |__demo_spec.png
+--results
 --support___
             |__command.js
             |__e2e.js

@@ -1,6 +1,6 @@
 const demoLocator = require('../locators/demo_locator');
-const assert = require('../assertion/validation');
-const action = require('../../object_repository/assertion/actions')
+const assert = require('../assertion/verify');
+const action = require('../MouseAction/actions')
 
 export function verifyBackgroundColor(locator, bg, ...n) {
     cy.get(locator).eq(n).should('have.css', 'background-color')
@@ -33,6 +33,7 @@ export function verifyAndSelectCheckbox() {
 }
 
 export function verifyWindowAlert(locator, AlertMsg) {
+    //  window alert handle 
     const stub = cy.stub()
     cy.on('window:alert', stub)
     cy.get(locator).click()
@@ -48,7 +49,7 @@ export function verifyWindowConfirm(AlertMsg) {
 }
 
 export function verifyUrlRemoveAttr(locator, Attr, URL) {
-    cy.get(locator).invoke('removeAttr', Attr).click()
+    cy.get(locator).invoke('removeAttr', Attr).click({ force: true })
     assert.screenshotOnPage()
     cy.window().then((newWin) => {
         cy.wrap(newWin).its('location.href').should('include', URL)

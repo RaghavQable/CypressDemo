@@ -4,11 +4,11 @@
 import 'cypress-iframe'
 
 import locator from "../../object_repository/locators/demo_locator";
-const verify = require('../../object_repository/assertion/validation')
+const verify = require('../../object_repository/assertion/verifications')
 import specPath from "../../object_repository/utils";
 const action = require('../../object_repository/assertion/actions')
 const viewport = require('../../object_repository/assertion/viewport')
-const demoModule = require('../../object_repository/moduleFunctions/demo_module_1')
+const demoModule = require('../../object_repository/moduleFunctions/demo_module')
 
 describe('demo spec', () => {
   action.uncaughtException()

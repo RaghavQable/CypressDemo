@@ -16,17 +16,17 @@ export function screenshotOnPage() {
 }
 
 export function verifyContainsText(locator, text, ...n) {
-    // The the text single value is present on Ui Then it will be verify the text 
+    // This function is used to locate and select a DOM element that contains the specified text.
     cy.get(locator).eq(n).should('contain', text);
 }
 
 export function verifyText(locator, text, ...n) {
-    //  same value is present on Ui Then verify the Text 
+    //  This function  is used to make an assertion about the text content of an element. It verifies that the selected element has the exact text specified in the assertion
     cy.get(locator).eq(n).should('have.text', text);
 }
 
 export function verifyValue(locator, text, ...n) {
-    // verify the same value of locator
+    // verify the selected value
     cy.get(locator).eq(n).should('have.value', text);
 };
 
@@ -51,12 +51,12 @@ export function verifySelected(locator, ...n) {
 }
 
 export function verifyChecked(locator, ...n) {
-    // verify the element is checked
+    // verify the radio/checkboxes input is checked
     cy.get(locator).should('be.checked')
 }
 
 export function verifyShouldNotHaveText(locator, text, ...n) {
-    // verify the element value should be same 
+    // verify the element value should not be same 
     cy.get(locator).eq(n).should('not.have.value', text);
 }
 

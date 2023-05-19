@@ -5,6 +5,7 @@ module.exports = defineConfig({
     baseUrl: 'https://example.cypress.io',
     testIsolation: false,
     trashAssetsBeforeRuns: true,
+    screenshotOnRunFailure: true,
     defaultCommandTimeout: 10000,
     chromeWebSecurity: false,
     setupNodeEvents(on, config) {
